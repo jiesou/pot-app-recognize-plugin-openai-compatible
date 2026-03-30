@@ -24,13 +24,15 @@ async function recognize(base64, lang, options) {
         messages: [
             { "role": "system", "content": customPrompt },
             { "role": "user", "content": [
-                { "type": "image_url", "image_url": { "url": `data:image/png;base64,${base64}`, "detail": "high" } }
+                { "type": "image_url", "image_url": { "url": `data:image/png;base64,${base64}`, "detail": "low" } }
             ]}
         ],
         stream: false
     };
     
-    if (thinkMode !== "disable") 
+    if (thinkMode == "disable")
+        body.think = false;
+    else if (thinkMode == "enable")
         body.think = true;
 
     const headers = { 'Content-Type': 'application/json' };

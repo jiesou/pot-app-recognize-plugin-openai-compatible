@@ -31,8 +31,9 @@
       "key": "thinkMode",
       "display": "思考",
       "type": "select",
-      "default": "disable",
+      "default": "unset",
       "options": {
+        "unset": "不指定",
         "enable": "启用",
         "disable": "禁用"
       }

@@ -11,7 +11,15 @@
 3. 选择 `.potext` 文件，安装成功
 4. 将插件添加到服务列表即可使用
 
-可以使用 [硅基流动 SiliconFlow](https://siliconflow.cn/pricing) 提供的免费 PaddlePaddle/PaddleOCR-VL-1.5 模型，效果很不错，也很快
+可以使用 [硅基流动 SiliconFlow](https://siliconflow.cn/pricing) 提供的免费模型，效果很不错，也很快
+
+- THUDM/GLM-4.1V-9B-Thinking
+- PaddlePaddle/PaddleOCR-VL-1.5
+- Qwen3.5-4B
+
+这些模型都是可以多模态，比较适合 OCR 的
+
+除此之外，如果用 OpenAI API，那 gpt-5.4-nano 也不算贵，效果是目前最好的
 
 ## 感谢
 
