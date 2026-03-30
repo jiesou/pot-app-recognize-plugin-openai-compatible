@@ -26,6 +26,16 @@
       "display": "自定义 Prompt",
       "type": "input",
       "default": "Just recognize the text in the image. Do not offer unnecessary explanations."
+    },
+    {
+      "key": "thinkMode",
+      "display": "思考",
+      "type": "select",
+      "default": "disable",
+      "options": {
+        "enable": "启用",
+        "disable": "禁用"
+      }
     }
   ],
   "language": {

@@ -27,9 +27,11 @@ async function recognize(base64, lang, options) {
                 { "type": "image_url", "image_url": { "url": `data:image/png;base64,${base64}`, "detail": "high" } }
             ]}
         ],
-        stream: false,
-        think: thinkMode !== "disable"
+        stream: false
     };
+    
+    if (thinkMode !== "disable") 
+        body.think = true;
 
     const headers = { 'Content-Type': 'application/json' };
     if (apiKey) {
