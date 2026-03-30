@@ -3,17 +3,15 @@ async function recognize(base64, lang, options) {
     const { tauriFetch: fetch } = utils;
     let { apiKey, requestPath, model, customPrompt, thinkMode } = config;
 
-    const url = new URL(requestPath);
     if (!/https?:\/\/.+/.test(requestPath)) {
         requestPath = `https://${requestPath}`;
     }
     if (requestPath.endsWith('/')) {
         requestPath = requestPath.slice(0, -1);
     }
-    if (!url.pathname.includes('/chat/completions')) {
-        url.pathname = basePath + '/chat/completions';
+    if (!requestPath.includes('/chat/completions')) {
+        requestPath = requestPath + '/chat/completions';
     }
-    requestPath = url.toString();
 
     if (!customPrompt) {
         customPrompt = "Just recognize the text in the image. Do not offer unnecessary explanations.";
