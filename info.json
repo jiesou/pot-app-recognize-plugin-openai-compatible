@@ -3,7 +3,7 @@
   "plugin_type": "recognize",
   "icon": "icon.png",
   "display": "OpenAI-Compatible",
-  "homepage": "https://github.com/jiesou/pot-app-recognize-plugin-openai_compatible",
+  "homepage": "https://github.com/jiesou/pot-app-recognize-plugin-openai-compatible",
   "needs": [
     {
       "key": "requestPath",
