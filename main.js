@@ -24,7 +24,6 @@ async function recognize(base64, lang, options) {
         messages: [
             { "role": "system", "content": customPrompt },
             { "role": "user", "content": [
-                { "type": "text", "text": "Text Recognition: " },
                 { "type": "image_url", "image_url": { "url": `data:image/png;base64,${base64}`, "detail": "high" } }
             ]}
         ],
